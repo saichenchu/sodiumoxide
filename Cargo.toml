@@ -11,8 +11,8 @@ version = "0.0.14"
 
 [dependencies]
 libc = "0.2"
-libsodium-sys = "0.0.14"
-serde = { version="0.9", optional = true }
+libsodium-sys = { path = "libsodium-sys", version = "0.0.14" }
+serde = { version = "0.9", optional = true }
 
 [dev-dependencies]
 serde = "0.9"
@@ -23,3 +23,4 @@ rmp-serde = "0.12"
 [features]
 benchmarks = []
 default = ["serde"]
+get-libsodium = ["libsodium-sys/get-libsodium"]
